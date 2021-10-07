@@ -23,7 +23,7 @@ const personalMovieDB = {
 };
 
 
-for (let i = 0; i < 2; i++) {
+ for (let i = 0; i < 2; i++) {
     const   a = prompt("Один из последних просмотренных фильмов?", ""),
             b = prompt("На сколько оцените фильм?", "");
     
@@ -35,7 +35,40 @@ for (let i = 0; i < 2; i++) {
         console.log('error');
         i--; // если пользователь не выполнил условия то возвращаем цикл на наг назад
     }
-} 
+}  
+
+/* Второй вариант решения 2й задачки.
+let i = 0;
+do {
+    const   a = prompt("Один из последних просмотренных фильмов?", ""),
+            b = prompt("На сколько оцените фильм?", "");
+            i++;
+    if ( a != null && b != null && a != '' && b != '' && a.length < 50 ) {
+        personalMovieDB.movies[a] = b;
+        console.log('done'); 
+    } else {
+        console.log('error');
+        i--; 
+    }
+} while (i < 2); */
+
+/* Третий способ решения 2й задачи
+let i = 0;
+while ( i < 2 ) {
+    const   a = prompt("Один из последних просмотренных фильмов?", ""),
+            b = prompt("На сколько оцените фильм?", "");
+            i++;
+    if ( a != null && b != null && a != '' && b != '' && a.length < 50 ) {
+        personalMovieDB.movies[a] = b;
+        console.log('done'); 
+    } else {
+        console.log('error');
+        i--; 
+    }
+} */
+
+
+
 
 
  if (personalMovieDB.count < 10) {
