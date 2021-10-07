@@ -35,10 +35,10 @@ for (let i = 0; i < 2; i++) {
         console.log('error');
         i--; // если пользователь не выполнил условия то возвращаем цикл на наг назад
     }
-}
+} 
 
 
-if (personalMovieDB.count < 10) {
+ if (personalMovieDB.count < 10) {
     console.log("Просмотрено довольно мало фильмов");
 } else if (personalMovieDB.count >= 10 && personalMovieDB.count < 30) {
     console.log("Вы классический зритель");
@@ -48,6 +48,12 @@ if (personalMovieDB.count < 10) {
     console.log("Произошла ошибка");
 }
 
+
+// второй вариант решения 3й задачи.
+/* (personalMovieDB.count < 10) ? console.log("Просмотрено довольно мало фильмов") : 
+(personalMovieDB.count >= 10 && personalMovieDB.count < 30) ? console.log("Вы классический зритель") :
+(personalMovieDB.count >= 30) ? console.log("Вы киноман") :
+console.log("Произошла ошибка"); */
 
 console.log(personalMovieDB);
 
